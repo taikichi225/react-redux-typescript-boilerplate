@@ -8,6 +8,10 @@
         "lib": [
             "es2018",
             "dom"
+        ],
+        "typeRoots": [
+            "node_modules/@types",
+            "node_modules/jest-enzyme"
         ]
     }
 }
