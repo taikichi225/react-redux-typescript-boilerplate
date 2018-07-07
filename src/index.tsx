@@ -1,13 +1,16 @@
 import * as React from 'react'
-import * as ReactDom from 'react-dom'
-import store from './store'
+import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
+import { createStore, Store } from 'redux'
+import todos, { Todos } from './modules/Todo'
 
-import Hello from './hello'
+import App from './App'
 
-ReactDom.render(
+let store: Store<Todos> = createStore(todos, [])
+
+ReactDOM.render(
   <Provider store={store}>
-    <Hello content="Hello, World" />
+    <App />
   </Provider>,
   document.getElementById('app')
 )
